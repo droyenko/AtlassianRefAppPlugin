@@ -1,0 +1,18 @@
+package com.microsoft.teams.service;
+
+import com.atlassian.activeobjects.tx.Transactional;
+import com.microsoft.teams.ao.TeamsAtlasUser;
+
+import java.util.List;
+import java.util.Map;
+
+@Transactional
+public interface TeamsAtlasUserService {
+    TeamsAtlasUser add(Map<String, String> properties);
+
+    List<TeamsAtlasUser> all();
+
+    List<TeamsAtlasUser> getUserByTeamsId(String teamsId);
+
+    void deleteAoObject(String msTeamsUserId);
+}
