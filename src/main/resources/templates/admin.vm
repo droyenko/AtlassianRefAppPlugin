@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>$i18n.getText("config-panel.title")</title>
+    <meta name="decorator" content="atl.admin">
+
+</head>
+<body>
+<form id="admin" class="aui">
+    <div class="field-group">
+        <h2>$i18n.getText("config-panel.greeting")</h2>
+    </div>
+    <div class="field-group">
+       <ul>
+           <li>$i18n.getText("config-panel.application-link.step1")</li>
+           <li>$i18n.getText("config-panel.application-link.step2")</li>
+           <li>$i18n.getText("config-panel.application-link.step3")</li>
+           <li>$i18n.getText("config-panel.application-link.step4")</li>
+           <li>$i18n.getText("config-panel.application-link.step5")</li>
+           <li>$i18n.getText("config-panel.application-link.step6")</li>
+               <ul>
+                   <li>Consumer key = $consumerKey</li>
+                   <li>Consumer name = $consumerName</li>
+                   <li>Public key =
+                       <div style="width: 300px; padding: 10px; border: 1px solid grey; word-break: break-word;">$publicKey</div>
+                   </li>
+               </ul>
+           <li>$i18n.getText("config-panel.application-link.step7")</li>
+           <li>$i18n.getText("config-panel.application-link.step8")</li>
+           <li>$i18n.getText("config-panel.application-link.step9")$atlasId</li>
+
+       </ul>
+    </div>
+    <div class="field-group">
+        <button onclick="location.href = '$atlasHome/plugins/servlet/upm';" id="back-button">Go Back</button>
+    </div>
+</form>
+</body>
+</html>

@@ -12,7 +12,7 @@ public class AppUtils {
 
     static {
         try (final InputStream stream =
-                     AppUtils.class.getResourceAsStream("/config.properties")) {
+                     AppUtils.class.getResourceAsStream("/integration.properties")) {
             PROPERTIES.load(stream);
         } catch (IOException e) {
             throw new IllegalStateException(e);

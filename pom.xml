@@ -42,6 +42,7 @@
             <groupId>com.atlassian.plugins</groupId>
             <artifactId>atlassian-plugins-api</artifactId>
             <version>4.5.1</version>
+            <scope>provided</scope>
         </dependency>
 
         <!--Tests-->
@@ -80,9 +81,17 @@
             <version>2.2.2-atlassian-1</version>
         </dependency>
 
+        <!--UI-->
+        <dependency>
+            <groupId>com.atlassian.templaterenderer</groupId>
+            <artifactId>atlassian-template-renderer-api</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!--Spring-->
         <dependency>
-            <groupId>org.springframework</groupId>git
+            <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>2.5.5</version>
             <scope>provided</scope>
@@ -162,7 +171,8 @@
         <plugins>
             <plugin>
                 <groupId>com.atlassian.maven.plugins</groupId>
-                <artifactId>refapp-maven-plugin</artifactId>
+                <!--<artifactId>refapp-maven-plugin</artifactId>-->
+                <artifactId>maven-refapp-plugin</artifactId>
                 <version>${amps.version}</version>
                 <extensions>true</extensions>
                 <configuration>
@@ -235,12 +245,13 @@
         <platform.version>5.0.0</platform.version>
         <refapp.version>5.0.0</refapp.version>
         <quick.reload.version>3.0.0</quick.reload.version>
-        <amps.version>8.0.0</amps.version>
+        <!--<amps.version>8.0.0</amps.version>-->
+        <amps.version>6.3.21</amps.version>
         <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
         <atlassian.spring.scanner.version>1.2.13</atlassian.spring.scanner.version>
 
         <!-- This property ensures consistency between the key in atlassian-plugin.xml and the OSGi bundle's key. -->
-        <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
+        <atlassian.plugin.key>${project.artifactId}</atlassian.plugin.key>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>

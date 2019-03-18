@@ -5,6 +5,8 @@
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
         <param name="plugin-icon">images/pluginIcon.png</param>
         <param name="plugin-logo">images/pluginLogo.png</param>
+
+        <param name="configure.url">/plugins/servlet/xproduct/admin</param>
     </plugin-info>
 
     <!-- add our i18n resource -->
@@ -25,6 +27,10 @@
         <description>The module configuring the Active Objects service used by this plugin</description>
         <entity>com.microsoft.teams.ao.TeamsAtlasUser</entity>
     </ao>
+
+    <servlet key="admin-servlet" class="com.microsoft.teams.servlets.ConfigPageServlet">
+        <url-pattern>/xproduct/admin</url-pattern>
+    </servlet>
 
     <servlet name="mappingServlet" class="com.microsoft.teams.servlets.TeamsAtlasUserServlet" key="test">
         <url-pattern>/user/mapping</url-pattern>
